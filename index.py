@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from bottle import route, run, template
-import motion
+import mpi
 
 @route('/')
 def root():
@@ -8,12 +8,11 @@ def root():
 
 @route('/motion')
 def motion():
-    print "aaaaaaaaaaaaaaaaaaaa"
-    return template('web')
+    mpi.main()
+    return "プログラム起動"
 
 @route('/test')
 def test():
     return "test"
 
-
-run(host='localhost', port=8080)
+run(host='0.0.0.0', port=8080)

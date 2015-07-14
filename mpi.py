@@ -5,3 +5,4 @@ def main():
 def sub():
     print "MMMMMOTION"
 
+main()
